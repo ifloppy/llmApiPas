@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 450
+  Height = 302
+  Top = 250
+  Width = 495
+  Caption = 'FormOllama1'
+  ClientHeight = 302
+  ClientWidth = 495
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object Label1: TLabel
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 301
+    Caption = 'Call API of ollama to use LLM in Pascal application(Basic)'
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 8
+    Height = 23
+    Top = 88
+    Width = 400
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 400
+    EditLabel.Caption = 'Model name'
+    TabOrder = 0
+    Text = 'llama3'
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 8
+    Height = 23
+    Top = 136
+    Width = 400
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 400
+    EditLabel.Caption = 'Prompt'
+    TabOrder = 1
+    Text = 'Say "Hello" to me.'
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 128
+    Top = 168
+    Width = 480
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 416
+    Height = 25
+    Top = 134
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Send'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 8
+    Height = 23
+    Top = 35
+    Width = 400
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 4
+    Text = 'http://127.0.0.1:11434'
+  end
+end
